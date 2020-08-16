@@ -8,6 +8,8 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 
 You can run your application in dev mode that enables live coding using:
 ```
+docker run --name elasticsearch  -e "discovery.type=single-node" -e "ES_JAVA_OPTS=-Xms512m -Xmx512m"\
+       --rm -p 9200:9200 docker.elastic.co/elasticsearch/elasticsearch-oss:7.5.1
 ./mvnw quarkus:dev
 ```
 
